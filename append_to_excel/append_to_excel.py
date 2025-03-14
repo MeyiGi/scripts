@@ -7,7 +7,7 @@ def append_to_excel(data, filename="output.xlsx"):
         return  # Если данных нет, ничего не делаем
 
     if not os.path.exists(filename):
-        workbook = openpyxl.Workbook()
+        workbook = openpyxl.Workbook()  
         sheet = workbook.active
         headers = list(data[0].keys())  # Берем заголовки из первого словаря
         sheet.append(headers)
